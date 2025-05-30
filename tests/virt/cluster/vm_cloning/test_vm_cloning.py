@@ -42,6 +42,7 @@ FEDORA_VM_FOR_CLONING = "fedora-vm-with-labels-annotations-mac-smbios"
 
 pytestmark = [pytest.mark.s390x]
 
+
 def dv_dict_for_vm_cloning(namespace, storage_class, dv_template):
     dv = DataVolume(
         name=dv_template["name"],
