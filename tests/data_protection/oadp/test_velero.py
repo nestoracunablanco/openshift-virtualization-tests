@@ -7,6 +7,7 @@ from utilities.constants import TIMEOUT_10SEC, Images
 pytestmark = pytest.mark.usefixtures("skip_if_no_storage_class_for_snapshot")
 
 
+@pytest.mark.s390x
 @pytest.mark.parametrize(
     "velero_backup_single_namespace",
     [
@@ -26,6 +27,7 @@ def test_backup_while_dv_create(
     velero_backup_single_namespace.wait_for_status(status="PartiallyFailed")
 
 
+@pytest.mark.s390x
 @pytest.mark.parametrize(
     "rhel_vm_with_data_volume_template",
     [
